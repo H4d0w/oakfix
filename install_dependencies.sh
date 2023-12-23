@@ -14,7 +14,6 @@ readonly linux_pkgs=(
 
 readonly ubuntu_pkgs=(
     ${linux_pkgs[@]}
-    # https://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html
     build-essential
     libgtk2.0-dev
     pkg-config
@@ -22,16 +21,15 @@ readonly ubuntu_pkgs=(
     libavformat-dev
     libswscale-dev
     python3-dev
-    libtbb2
+    libtbb12
     libtbb-dev
     libjpeg-dev
     libpng-dev
     libtiff-dev
-    # https://stackoverflow.com/questions/55313610
     ffmpeg
     libsm6
     libxext6
-    libgl1-mesa-glx
+    libgl1-mesa-dri
     python3-pyqt5
     python3-pyqt5.qtquick
     qml-module-qtquick-controls2
@@ -64,6 +62,20 @@ readonly ubuntu_arm_pkgs=(
     libhdf5-dev
     libatlas-base-dev
     libjasper-dev
+    libilmbase-dev
+    libopenexr-dev
+    libgstreamer1.0-dev
+)
+
+readonly ubuntu_arm_pkgs=(
+    "${ubuntu_pkgs[@]}"
+    libdc1394-22-dev
+    # https://stackoverflow.com/a/53402396/5494277
+    libhdf5-dev
+    libhdf5-dev
+    libatlas-base-dev
+    libjasper-dev
+    # https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi/issues/18#issuecomment-433953426
     libilmbase-dev
     libopenexr-dev
     libgstreamer1.0-dev
