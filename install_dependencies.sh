@@ -49,13 +49,13 @@ readonly ubuntu_pkgs=(
 readonly ubuntu_pkgs_pre22_04=(
     "${ubuntu_pkgs[@]}"
     libtbb2
-    # Add libdc1394-22-dev if it's available for pre 22.04 versions or find an alternative
+    libdc1394-22-dev
 )
 
 readonly ubuntu_pkgs_post22_04=(
     "${ubuntu_pkgs[@]}"
     libtbbmalloc2
-    # Replace libdc1394-22-dev with the appropriate package for post 22.04 versions
+    # Check if there's a replacement for libdc1394-22-dev or if it's no longer needed
 )
 
 
